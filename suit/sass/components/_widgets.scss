@@ -63,15 +63,36 @@ fieldset {
     height: auto;
   }
 }
+
+// @TODO move out of suit?
+.date-range {
+  display: inline-flex;
+  vertical-align: top;
+  .widget-AdminDateWidget {
+    margin-right: 5px;
+    input {
+      width: 85px !important;
+      vertical-align: top !important;
+      height: calc(2.5rem - 2px);
+    }
+    a:first-child {
+      display: none;
+    }
+  }
+}
 .widget-AdminSplitDateTime, .widget-AdminDateWidget, .widget-AdminTimeWidget {
   // Hide all text
-  font-size: 0;
-  color: transparent;
+  //font-size: 0;
+  //color: transparent;
   p {
     margin: 0;
   }
 
+  .datetimeshortcuts + .datetimeshortcuts {
+    display: none; // hide dups caused by multiple js calls (in case we have more than one filter instance)
+  }
   .datetimeshortcuts {
+    color: transparent; // hide pipes
     position: relative;
     margin: 0 1.5rem 0 0;
     white-space: nowrap;
@@ -83,9 +104,7 @@ fieldset {
         margin-left: 3.15rem;
         margin-top: .45rem;
       }
-      &:not(:first-child) {
-        vertical-align: top;
-      }
+
       $icon-width: 2rem;
       &[id^='calendarlink'], &[id^='clocklink'] {
         padding: $input-padding-y 0.75rem;

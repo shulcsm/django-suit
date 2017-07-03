@@ -231,7 +231,7 @@ mark, .mark { padding: 0.2em; background-color: #fcf8e3; }
 
 .img-fluid { max-width: 100%; height: auto; }
 
-.img-thumbnail { padding: 0.25rem; background-color: #f1f1f1; border: 1px solid #ddd; border-radius: 0.25rem; -webkit-transition: all .2s ease-in-out; transition: all .2s ease-in-out; max-width: 100%; height: auto; }
+.img-thumbnail { padding: 0.25rem; background-color: #f1f1f1; border: 1px solid #ddd; border-radius: 0.25rem; transition: all .2s ease-in-out; max-width: 100%; height: auto; }
 
 .figure { display: inline-block; }
 
@@ -679,8 +679,6 @@ pre code { padding: 0; font-size: inherit; color: inherit; background-color: tra
 
 .form-control::-webkit-input-placeholder, fieldset input[type=text]::-webkit-input-placeholder, fieldset input[type=url]::-webkit-input-placeholder, fieldset input[type=email]::-webkit-input-placeholder, fieldset input[type=number]::-webkit-input-placeholder, fieldset input[type=password]::-webkit-input-placeholder, fieldset input[type=date]::-webkit-input-placeholder, fieldset input[type=tel]::-webkit-input-placeholder, fieldset .vTextField::-webkit-input-placeholder, fieldset .vURLField::-webkit-input-placeholder, fieldset .vLargeTextField::-webkit-input-placeholder, fieldset .vTimeField::-webkit-input-placeholder, fieldset .vDateField::-webkit-input-placeholder, .selector .selector-available select::-webkit-input-placeholder, .selector .selector-chosen select::-webkit-input-placeholder, #changelist #toolbar #changelist-search input[type='text']::-webkit-input-placeholder, #changelist #changelist-form .actions select::-webkit-input-placeholder { color: #999; opacity: 1; }
 
-.form-control::-moz-placeholder, fieldset input[type=text]::-moz-placeholder, fieldset input[type=url]::-moz-placeholder, fieldset input[type=email]::-moz-placeholder, fieldset input[type=number]::-moz-placeholder, fieldset input[type=password]::-moz-placeholder, fieldset input[type=date]::-moz-placeholder, fieldset input[type=tel]::-moz-placeholder, fieldset .vTextField::-moz-placeholder, fieldset .vURLField::-moz-placeholder, fieldset .vLargeTextField::-moz-placeholder, fieldset .vTimeField::-moz-placeholder, fieldset .vDateField::-moz-placeholder, .selector .selector-available select::-moz-placeholder, .selector .selector-chosen select::-moz-placeholder, #changelist #toolbar #changelist-search input[type='text']::-moz-placeholder, #changelist #changelist-form .actions select::-moz-placeholder { color: #999; opacity: 1; }
-
 .form-control:-ms-input-placeholder, fieldset input[type=text]:-ms-input-placeholder, fieldset input[type=url]:-ms-input-placeholder, fieldset input[type=email]:-ms-input-placeholder, fieldset input[type=number]:-ms-input-placeholder, fieldset input[type=password]:-ms-input-placeholder, fieldset input[type=date]:-ms-input-placeholder, fieldset input[type=tel]:-ms-input-placeholder, fieldset .vTextField:-ms-input-placeholder, fieldset .vURLField:-ms-input-placeholder, fieldset .vLargeTextField:-ms-input-placeholder, fieldset .vTimeField:-ms-input-placeholder, fieldset .vDateField:-ms-input-placeholder, .selector .selector-available select:-ms-input-placeholder, .selector .selector-chosen select:-ms-input-placeholder, #changelist #toolbar #changelist-search input[type='text']:-ms-input-placeholder, #changelist #changelist-form .actions select:-ms-input-placeholder { color: #999; opacity: 1; }
 
 .form-control::placeholder, fieldset input[type=text]::placeholder, fieldset input[type=url]::placeholder, fieldset input[type=email]::placeholder, fieldset input[type=number]::placeholder, fieldset input[type=password]::placeholder, fieldset input[type=date]::placeholder, fieldset input[type=tel]::placeholder, fieldset .vTextField::placeholder, fieldset .vURLField::placeholder, fieldset .vLargeTextField::placeholder, fieldset .vTimeField::placeholder, fieldset .vDateField::placeholder, .selector .selector-available select::placeholder, .selector .selector-chosen select::placeholder, #changelist #toolbar #changelist-search input[type='text']::placeholder, #changelist #changelist-form .actions select::placeholder { color: #999; opacity: 1; }
@@ -987,7 +985,7 @@ a.btn.disabled, .submit-row .deletelink-box a.disabled.deletelink, #content-main
 
 input[type="submit"].btn-block, input[type="reset"].btn-block, input[type="button"].btn-block { width: 100%; }
 
-.fade { opacity: 0; -webkit-transition: opacity .15s linear; transition: opacity .15s linear; }
+.fade { opacity: 0; transition: opacity .15s linear; }
 
 .fade.in { opacity: 1; }
 
@@ -999,7 +997,7 @@ tr.collapse.in { display: table-row; }
 
 tbody.collapse.in { display: table-row-group; }
 
-.collapsing { position: relative; height: 0; overflow: hidden; -webkit-transition-timing-function: ease; transition-timing-function: ease; -webkit-transition-duration: .35s; transition-duration: .35s; -webkit-transition-property: height; transition-property: height; }
+.collapsing { position: relative; height: 0; overflow: hidden; transition-timing-function: ease; transition-duration: .35s; transition-property: height; }
 
 .dropup, .dropdown { position: relative; }
 
@@ -1343,11 +1341,11 @@ tbody.collapse.in { display: table-row-group; }
 
 .card-img-bottom { border-bottom-right-radius: 0; border-bottom-left-radius: 0; }
 
-@media (min-width: 576px) { .card-deck { display: -webkit-box; display: -ms-flexbox; display: flex; -ms-flex-flow: row wrap; flex-flow: row wrap; margin-right: -0.625rem; margin-bottom: 0.75rem; margin-left: -0.625rem; }
-  .card-deck .card { -webkit-box-flex: 1; -ms-flex: 1 0 0; flex: 1 0 0; margin-right: 0.625rem; margin-bottom: 0; margin-left: 0.625rem; } }
+@media (min-width: 576px) { .card-deck { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-orient: horizontal; -webkit-box-direction: normal; -ms-flex-flow: row wrap; flex-flow: row wrap; margin-right: -0.625rem; margin-bottom: 0.75rem; margin-left: -0.625rem; }
+  .card-deck .card { -webkit-box-flex: 1; -ms-flex: 1 0 0px; flex: 1 0 0; margin-right: 0.625rem; margin-bottom: 0; margin-left: 0.625rem; } }
 
-@media (min-width: 576px) { .card-group { display: -webkit-box; display: -ms-flexbox; display: flex; -ms-flex-flow: row wrap; flex-flow: row wrap; }
-  .card-group .card { -webkit-box-flex: 1; -ms-flex: 1 0 0; flex: 1 0 0; }
+@media (min-width: 576px) { .card-group { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-orient: horizontal; -webkit-box-direction: normal; -ms-flex-flow: row wrap; flex-flow: row wrap; }
+  .card-group .card { -webkit-box-flex: 1; -ms-flex: 1 0 0px; flex: 1 0 0; }
   .card-group .card + .card { margin-left: 0; border-left: 0; }
   .card-group .card:first-child { border-bottom-right-radius: 0; border-top-right-radius: 0; }
   .card-group .card:first-child .card-img-top { border-top-right-radius: 0; }
@@ -1358,7 +1356,7 @@ tbody.collapse.in { display: table-row-group; }
   .card-group .card:not(:first-child):not(:last-child) { border-radius: 0; }
   .card-group .card:not(:first-child):not(:last-child) .card-img-top, .card-group .card:not(:first-child):not(:last-child) .card-img-bottom { border-radius: 0; } }
 
-@media (min-width: 576px) { .card-columns { -webkit-column-count: 3; -moz-column-count: 3; column-count: 3; -webkit-column-gap: 1.25rem; -moz-column-gap: 1.25rem; column-gap: 1.25rem; }
+@media (min-width: 576px) { .card-columns { -webkit-column-count: 3; column-count: 3; -webkit-column-gap: 1.25rem; column-gap: 1.25rem; }
   .card-columns .card { display: inline-block; width: 100%; } }
 
 .tag { display: inline-block; padding: 0.25em 0.4em; font-size: 75%; font-weight: bold; line-height: 1; color: #fff; text-align: center; white-space: nowrap; vertical-align: baseline; border-radius: 0.25rem; }
@@ -1457,13 +1455,13 @@ base::-moz-progress-bar, .progress[value] { background-color: #eee; border-radiu
   .progress-bar { display: inline-block; height: 1rem; text-indent: -999rem; background-color: #0074d9; border-bottom-left-radius: 0.25rem; border-top-left-radius: 0.25rem; }
   .progress[width="100%"] { border-bottom-right-radius: 0.25rem; border-top-right-radius: 0.25rem; } }
 
-.progress-striped[value]::-webkit-progress-value { background-image: -webkit-linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent); background-image: linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent); background-size: 1rem 1rem; }
+.progress-striped[value]::-webkit-progress-value { background-image: linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent); background-size: 1rem 1rem; }
 
 .progress-striped[value]::-moz-progress-bar { background-image: linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent); background-size: 1rem 1rem; }
 
 .progress-striped[value]::-ms-fill { background-image: linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent); background-size: 1rem 1rem; }
 
-@media screen and (min-width: 0\0) { .progress-bar-striped { background-image: -webkit-linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent); background-image: linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent); background-size: 1rem 1rem; } }
+@media screen and (min-width: 0\0) { .progress-bar-striped { background-image: linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent); background-size: 1rem 1rem; } }
 
 .progress-animated[value]::-webkit-progress-value { -webkit-animation: progress-bar-stripes 2s linear infinite; animation: progress-bar-stripes 2s linear infinite; }
 
@@ -1525,7 +1523,7 @@ button.close { padding: 0; cursor: pointer; background: transparent; border: 0; 
 
 .modal { position: fixed; top: 0; right: 0; bottom: 0; left: 0; z-index: 1050; display: none; overflow: hidden; outline: 0; }
 
-.modal.fade .modal-dialog { -webkit-transition: -webkit-transform .3s ease-out; transition: -webkit-transform .3s ease-out; transition: transform .3s ease-out; transition: transform .3s ease-out, -webkit-transform .3s ease-out; -webkit-transform: translate(0, -25%); transform: translate(0, -25%); }
+.modal.fade .modal-dialog { transition: -webkit-transform .3s ease-out; transition: transform .3s ease-out; transition: transform .3s ease-out, -webkit-transform .3s ease-out; -webkit-transform: translate(0, -25%); transform: translate(0, -25%); }
 
 .modal.in .modal-dialog { -webkit-transform: translate(0, 0); transform: translate(0, 0); }
 
@@ -2213,17 +2211,23 @@ fieldset input[type=number], fieldset input[type=date], fieldset input.vIntegerF
 
 .ImageWidget .float-xs-left { margin-right: 1rem; max-width: 75px; height: auto; }
 
-.widget-AdminSplitDateTime, .widget-AdminDateWidget, .widget-AdminTimeWidget { font-size: 0; color: transparent; }
+.date-range { display: -webkit-inline-box; display: -ms-inline-flexbox; display: inline-flex; vertical-align: top; }
+
+.date-range .widget-AdminDateWidget { margin-right: 5px; }
+
+.date-range .widget-AdminDateWidget input { width: 85px !important; vertical-align: top !important; height: calc(2.5rem - 2px); }
+
+.date-range .widget-AdminDateWidget a:first-child { display: none; }
 
 .widget-AdminSplitDateTime p, .widget-AdminDateWidget p, .widget-AdminTimeWidget p { margin: 0; }
 
-.widget-AdminSplitDateTime .datetimeshortcuts, .widget-AdminDateWidget .datetimeshortcuts, .widget-AdminTimeWidget .datetimeshortcuts { position: relative; margin: 0 1.5rem 0 0; white-space: nowrap; display: -webkit-inline-box; display: -ms-inline-flexbox; display: inline-flex; }
+.widget-AdminSplitDateTime .datetimeshortcuts + .datetimeshortcuts, .widget-AdminDateWidget .datetimeshortcuts + .datetimeshortcuts, .widget-AdminTimeWidget .datetimeshortcuts + .datetimeshortcuts { display: none; }
+
+.widget-AdminSplitDateTime .datetimeshortcuts, .widget-AdminDateWidget .datetimeshortcuts, .widget-AdminTimeWidget .datetimeshortcuts { color: transparent; position: relative; margin: 0 1.5rem 0 0; white-space: nowrap; display: -webkit-inline-box; display: -ms-inline-flexbox; display: inline-flex; }
 
 .widget-AdminSplitDateTime .datetimeshortcuts a, .widget-AdminDateWidget .datetimeshortcuts a, .widget-AdminTimeWidget .datetimeshortcuts a { white-space: nowrap; font-size: 0.929rem; }
 
 .widget-AdminSplitDateTime .datetimeshortcuts a:first-child, .widget-AdminDateWidget .datetimeshortcuts a:first-child, .widget-AdminTimeWidget .datetimeshortcuts a:first-child { margin-left: 3.15rem; margin-top: .45rem; }
-
-.widget-AdminSplitDateTime .datetimeshortcuts a:not(:first-child), .widget-AdminDateWidget .datetimeshortcuts a:not(:first-child), .widget-AdminTimeWidget .datetimeshortcuts a:not(:first-child) { vertical-align: top; }
 
 .widget-AdminSplitDateTime .datetimeshortcuts a[id^='calendarlink'], .widget-AdminSplitDateTime .datetimeshortcuts a[id^='clocklink'], .widget-AdminDateWidget .datetimeshortcuts a[id^='calendarlink'], .widget-AdminDateWidget .datetimeshortcuts a[id^='clocklink'], .widget-AdminTimeWidget .datetimeshortcuts a[id^='calendarlink'], .widget-AdminTimeWidget .datetimeshortcuts a[id^='clocklink'] { padding: 0.5rem 0.75rem; position: absolute; left: -1px; z-index: 0; text-align: center; white-space: nowrap; }
 
@@ -2617,7 +2621,7 @@ body.suit_layout_vertical #header .suit-user-tools .welcome .fa, body.suit_layou
 
 body.suit_layout_vertical #header .suit-user-tools .user-links { display: inline-block; margin-right: .75rem; margin-bottom: .25rem; }
 
-body.suit_layout_vertical #header .suit-user-tools .icon-link { font: 0/0 a; color: transparent; text-shadow: none; background-color: transparent; border: 0; display: inline-block; padding: .4rem 0; width: 26px; text-align: center; border-radius: 0.2rem; position: relative; -webkit-transition: background-color .2s, color .2s; transition: background-color .2s, color .2s; color: #fff; }
+body.suit_layout_vertical #header .suit-user-tools .icon-link { font: 0/0 a; color: transparent; text-shadow: none; background-color: transparent; border: 0; display: inline-block; padding: .4rem 0; width: 26px; text-align: center; border-radius: 0.2rem; position: relative; transition: background-color .2s, color .2s; color: #fff; }
 
 body.suit_layout_vertical #header .suit-user-tools .icon-link:hover { background-color: #282c37; color: #279bee; }
 
@@ -2625,7 +2629,7 @@ body.suit_layout_vertical #header .suit-user-tools .icon-link:hover:after { opac
 
 body.suit_layout_vertical #header .suit-user-tools .icon-link:before { font-family: FontAwesome; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; text-rendering: auto; font-size: 1.143rem; line-height: normal; display: inline-block; }
 
-body.suit_layout_vertical #header .suit-user-tools .icon-link:after { font-family: "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif; display: block; position: absolute; content: attr(data-title); left: 0; top: 40px; font-size: 10px; white-space: nowrap; opacity: 0; -webkit-transition: opacity .2s; transition: opacity .2s; }
+body.suit_layout_vertical #header .suit-user-tools .icon-link:after { font-family: "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif; display: block; position: absolute; content: attr(data-title); left: 0; top: 40px; font-size: 10px; white-space: nowrap; opacity: 0; transition: opacity .2s; }
 
 body.suit_layout_vertical #header .suit-user-tools .icon-link.view-site-link:before { content: ""; }
 
@@ -2651,7 +2655,7 @@ body.suit_layout_horizontal #suit-nav > ul > li:last-child > a { border-right: 1
 
 body.suit_layout_horizontal #suit-nav > ul > li.active a { background-color: #fff; color: #373a3c; font-weight: bold; box-shadow: inset 0 3px 0 #279bee; }
 
-body.suit_layout_horizontal #suit-nav > ul > li.active a:hover { background-image: -webkit-linear-gradient(top, #e9e9e9 0%, #fff 100%); background-image: linear-gradient(to bottom, #e9e9e9 0%, #fff 100%); background-repeat: repeat-x; filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FFE9E9E9', endColorstr='#FFFFFFFF', GradientType=0); }
+body.suit_layout_horizontal #suit-nav > ul > li.active a:hover { background-image: linear-gradient(to bottom, #e9e9e9 0%, #fff 100%); background-repeat: repeat-x; filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FFE9E9E9', endColorstr='#FFFFFFFF', GradientType=0); }
 
 body.suit_layout_horizontal #suit-nav > ul > li:hover > a { background-color: #43495a; }
 
